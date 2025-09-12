@@ -2,7 +2,7 @@
 #define HEADER_H
 #define SIZE 1500 //defining the size of my character array
 
-void prompt();
+void prompt(); //shell prompt
 int reader(); //reads input exits shell when EOF 
 int exiter(); // if input = exit terminates shell
 int director();

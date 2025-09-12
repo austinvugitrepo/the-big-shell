@@ -10,7 +10,7 @@ int main(){ // start of the main function
   
   while(1){
 
-   prompt();
+   prompt(); //calls prompt
    fflush(stdout);    //ensures prompt gets shown right away
    if(!reader()){
       break;         //calls reader turns 0 to 1 then break
@@ -19,10 +19,10 @@ int main(){ // start of the main function
    if(!exiter()){
       break;      //calls exiter turns 0 to 1 then break
     }
-   if(!director()){
+   if(!director()){ //calls director turna 0 to 1 then continue with loop
      continue;
     }
 
-   printf("bigsh: %s :command is not found\n", input);
+   printf("bigsh: %s :command is not found\n", input); //if no other command is detected run this message
 }
 }
