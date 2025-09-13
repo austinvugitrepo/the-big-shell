@@ -5,7 +5,9 @@
 void prompt(); //shell prompt
 int reader(); //reads input exits shell when EOF 
 int exiter(); // if input = exit terminates shell
-int director();
+int director(); //for pwd command
+int cdirector(); //for cd command
+
 extern char input[SIZE]; // refering at all times to input
 
 #endif

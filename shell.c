@@ -22,6 +22,9 @@ int main(){ // start of the main function
    if(!director()){ //calls director turna 0 to 1 then continue with loop
      continue;
     }
+    if(!cdirector()){ //calls cdirector same logic as director 
+     continue;
+    }
 
    printf("bigsh: %s :command is not found\n", input); //if no other command is detected run this message
 }
