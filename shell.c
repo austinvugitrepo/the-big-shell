@@ -16,6 +16,7 @@ int main(){ // start of the main function
       break;         //calls reader turns 0 to 1 then break
     }
    input[strcspn(input, "\n")] = '\0'; //removes \n 
+   tokener();
    if(!exiter()){
       break;      //calls exiter turns 0 to 1 then break
     }
@@ -25,7 +26,7 @@ int main(){ // start of the main function
     if(!cdirector()){ //calls cdirector same logic as director 
      continue;
     }
-
+    
    printf("bigsh: %s :command is not found\n", input); //if no other command is detected run this message
 }
 }

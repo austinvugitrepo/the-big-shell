@@ -7,6 +7,7 @@ int reader(); //reads input exits shell when EOF
 int exiter(); // if input = exit terminates shell
 int director(); //for pwd command
 int cdirector(); //for cd command
+void tokener(); //tokenizer
 
 extern char input[SIZE]; // refering at all times to input
 
