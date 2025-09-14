@@ -26,7 +26,13 @@ int main(){ // start of the main function
     if(!cdirector()){ //calls cdirector same logic as director 
      continue;
     }
-    
+   
+   if (countToken > 0){ //make sure token is at least 1
+      externalCommand();
+    }
+   else {
    printf("bigsh: %s :command is not found\n", input); //if no other command is detected run this message
-}
+   }   
+ }
+
 }

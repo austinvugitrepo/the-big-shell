@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h> //libaries 
 #include <string.h>
-#include <unistd.h> //for getcwd func.
+#include <unistd.h>
 
 
 int reader(){  //read function
