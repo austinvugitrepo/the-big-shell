@@ -9,11 +9,13 @@ int reader(){  //read function
    if (fgets(input,sizeof(input), stdin) == NULL){ //if read from keyboard equal NULL return 0;
         return 0;
   }
+  return 1; //otherwise return 1
  }
   int exiter(){ // exit command function
     if (strcmp(input, "exit") == 0){  //if input equal exit  return 0;
        return 0;
 }
+  return 1; //same like reader
 }
 int director(){
    char path[500];  // character array

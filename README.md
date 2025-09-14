@@ -1,7 +1,15 @@
-# the-big-shell
-The assignment given is to make a UNIX shell and so I first started with the base of my shell.
-To make the program loop in the main function, I used a while loop to infinitely loop it until
-you type exit from the shell i also added a prompt to show the $ like how bash looks and even Korn, 
-so I guess this could be present in most Unix/Unix-like shells. I made a character array that holds 
-enough characters i think, and make my program read the input of the user, before using strcmp
-to help with the exit, until then anything typed the shell will continue to run
+# bigsh: The-Big-Shell
+
+bigsh or The-Big-Shell is a shell written in C and developed for Unix/Unix-like systems which was originally started as a school project.
+Currently this shell has been tested and works for both macOS and Linux platforms.
+
+bigsh as of this far has these commands implemented into it:
+ - cd //internal shell command
+ - pwd //internal shell command possibly external command as well
+ - exit //internal shell command
+
+As of now bigsh composes of these files:
+ - header.h //this is for the declarations
+ - define.c //this file is my implementation of primarily internal shell commands
+ - shell.c  //this is the main c file
+ - tokenizer.c //this is the tokenizer c file
