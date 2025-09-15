@@ -21,18 +21,20 @@ int main(){ // start of the main function
       break;      //calls exiter turns 0 to 1 then break
     }
    if(!director()){ //calls director turna 0 to 1 then continue with loop
+     add_to_history(input); 
      continue;
     }
-    if(!cdirector()){ //calls cdirector same logic as director 
+    if(!cdirector()){ //calls cdirector same logic as director
+     add_to_history(input);  
      continue;
     }
-   
-   if (countToken > 0){ //make sure token is at least 1
-      externalCommand();
-    }
-   else {
-   printf("bigsh: %s :command is not found\n", input); //if no other command is detected run this message
-   }   
+    
+    if (countToken > 0 || strcmp(input, "hist") == 0 || input[0] == 'r') {
+            handle_history(input);
+     } else {
+            printf("bigsh: %s :command is not found\n", input);
+      }   
+
  }
 
 }

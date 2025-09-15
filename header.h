@@ -10,6 +10,8 @@ int exiter(); // if input = exit terminates shell
 int director(); //for pwd command
 int cdirector(); //for cd command
 void tokener(); //tokenizer
+void handle_history(char *input);
+void add_to_history(const char *cmd);
 
 extern char input[SIZE]; // extern allows all the c files to access the variables
 extern char *token_cap[MAXTOKEN];
