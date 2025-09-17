@@ -2,14 +2,18 @@
 #include <stdio.h>
 #include <stdlib.h> //libaries 
 #include <string.h>
+#include <signal.h>
 
 char input[SIZE];  // holds the characters for strings
-
+void crtlc(int signal) {
+fflush(stdout);
+}
 
 int main(){ // start of the main function
   
   while(1){
 
+   signal(SIGINT, crtlc); 
    prompt(); //calls prompt
    fflush(stdout);    //ensures prompt gets shown right away
    if(!reader()){
