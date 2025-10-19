@@ -1,7 +1,7 @@
 # bigsh: The-Big-Shell
 
-bigsh or The-Big-Shell is a shell written in C and developed for Unix/Unix-like systems which was originally started as a school project.
-Currently this shell has been tested and works for macOS, Linux, OpenBSD platforms.
+* bigsh or The-Big-Shell is a shell written in C and developed for Unix/Unix-like systems which was originally started as a school project.
+  Currently this shell has been tested and works for macOS, Linux, OpenBSD platforms.
 
  -> bigsh as of this far has these commands implemented into it:
 --------------------------------------------------------------
@@ -22,13 +22,15 @@ Currently this shell has been tested and works for macOS, Linux, OpenBSD platfor
  - external_cmd.c //this c file is where my externalCommand function lives
  - history.c // this c file is where the hist and r command lives
  - Makefile // my Makefile that does the compile and running of the executable
+ - Dockerfile //my Dockerfile used to make my container
 
  -> To run bigsh on your Unix/Unix-like system:
 -------------------------------------------------------------
  - have git installed and when in your chosen directory run "git clone https://github.com/austinvugitrepo/the-big-shell.git"
  - run "cd the-big-shell"
- - when in this directory compile all C files like so: "gcc -o bigsh define.c shell.c tokenizer.c external_cmd.c" the example shown is compiling with gcc but can be done with other C compilers like clang but results will vary.
+ - when in this directory compile all C files like so: "gcc -o bigsh define.c shell.c tokenizer.c external_cmd.c history.c" the example shown is compiling with gcc but can be done with other C compilers like clang but results will vary.
  - After that while still in the same directory run "./bigsh"
  - Alternatively after git clone and moving into "the-big-shell" directory, you may choose to run the command "make" and then "make run" to run the shell, additionally "make clean" is also provided to clean up the binary (make assumes you have gcc)
-
-Enjoy! - Austin
+ - In addition a Docker container has been provided that can run this application : sudo docker run -it austinvudockerrepo/whalehub:bigshv1.0
+ 
+ Enjoy! - Austin
